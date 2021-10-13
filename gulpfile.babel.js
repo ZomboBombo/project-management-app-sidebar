@@ -51,7 +51,7 @@ task ('server', () => {
         fn: series(scripts, 'refresh')
       },
       {
-        match: ['source/img/icon-*.svg'],
+        match: ['source/img/**/icon-*.svg'],
         fn: series(sprite, html, 'refresh')
       }
     ],
