@@ -19,7 +19,10 @@ import Utils from './gulp-config/utils';
 */
 
 // --- Таск для ручной оптимизации проектных изображений ---
-task('imagesoptimisation', imagesoptimisation);
+task('imagesoptimisation', (done) => {
+  imagesoptimisation();
+  done();
+});
 
 
 // --- Основной таск для поднятия сервера ---

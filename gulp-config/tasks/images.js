@@ -2,13 +2,12 @@ import { src, dest } from 'gulp';
 
 // --- Оптимизация изображений ---
 import imagemin from 'gulp-imagemin';
+import cheerio from 'gulp-cheerio';
 import webp from 'gulp-webp';
 import svgstore from 'gulp-svgstore';
-import cheerio from 'gulp-cheerio';
 
 // --- Вспомогательные утилиты ---
 import rename from 'gulp-rename';
-// const pipeline = require('readable-stream').pipeline;
 
 /*
 --- Импорт утилитарных модулей ---
@@ -30,7 +29,7 @@ import Utils from '../utils';
 const path_to_images_set = {
   of_all_formats: PATH_TO.source.images + '**/*.{png,jpg,svg}',
   of_bitmaps: PATH_TO.source.images + '**/*.{png,jpg}',
-  of_svg_icons: PATH_TO.source.images + '**/{icon-*}.svg',
+  of_svg_icons: PATH_TO.source.images + '**/icon-*.svg',
 };
 
 
@@ -46,7 +45,11 @@ export const images = () => {
         quality: 90,
         progressive: true
       }),
-      imagemin.svgo()
+      imagemin.svgo({
+        plugins: [{
+          removeViewBox: false
+        }]
+      })
     ]),
     dest(PATH_TO.source.images)
   );
@@ -61,8 +64,8 @@ export const transformToWebp = () => {
       quality: 90
     }),
     dest(PATH_TO.source.images)
-    );
-  };
+  );
+};
 
   
 // *** Сборка SVG-спрайта ***
@@ -72,6 +75,8 @@ export const sprite = () => {
     cheerio({
       run: ($) => {
         $('[fill]').removeAttr('fill');
+        $('[width]').removeAttr('width');
+        $('[height]').removeAttr('height');
       },
       parserOptions: {
         xmlMode: true
@@ -80,7 +85,7 @@ export const sprite = () => {
     svgstore({
       inlineSvg: true
     }),
-    rename('sprite_auto.svg'),
+    rename('sprite.svg'),
     dest(PATH_TO.build.images)
   );
 };

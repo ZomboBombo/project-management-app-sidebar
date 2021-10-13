@@ -16,7 +16,7 @@ export default {
       main_files: './source/js/*.js',
       vendor_files: 'source/js/vendor/*.js',
     },
-    fonts: './fonts/',
+    fonts: './source/fonts/',
     images: './source/img/',
   },
 
