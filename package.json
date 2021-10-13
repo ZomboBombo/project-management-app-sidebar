@@ -1,0 +1,54 @@
+{
+  "name": "eugenelepekhinart",
+  "version": "1.0.0",
+  "description": "Test task for Eugene Lepekhin Art studio",
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "scripts": {
+    "eslint": "eslint src/",
+    "test": "npm run eslint",
+    "build": "gulp build",
+    "start": "gulp start"
+  },
+  "author": "Sergey Nivikov (ZBom)",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.15.8",
+    "@babel/preset-env": "7.15.8",
+    "@babel/register": "7.15.3",
+    "autoprefixer": "10.3.7",
+    "babelify": "10.0.0",
+    "browser-sync": "2.27.5",
+    "browserify": "17.0.0",
+    "del": "6.0.0",
+    "eslint": "8.0.0",
+    "glob": "7.2.0",
+    "gulp": "4.0.2",
+    "gulp-cheerio": "1.0.0",
+    "gulp-csso": "4.0.1",
+    "gulp-imagemin": "7.1.0",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "9.0.1",
+    "gulp-posthtml": "3.0.5",
+    "gulp-rename": "2.0.0",
+    "gulp-sass": "5.0.0",
+    "gulp-sourcemaps": "3.0.0",
+    "gulp-svgstore": "8.0.0",
+    "gulp-webp": "4.0.1",
+    "merge-stream": "2.0.0",
+    "posthtml-include": "1.7.2",
+    "readable-stream": "3.6.0",
+    "sass": "1.42.1",
+    "stylelint": "13.13.1",
+    "vinyl-source-stream": "2.0.0"
+  },
+  "dependencies": {
+    "postcss": "^8.3.9"
+  },
+  "engines": {
+    "node": "10"
+  }
+}

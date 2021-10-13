@@ -1,0 +1,11 @@
+.DS_Store
+.idea
+.vscode
+node_modules
+*.ai
+*.log
+*.pdf
+*.psd
+*.sublime*
+build
+package-lock.json
