@@ -29,7 +29,7 @@ import Utils from '../utils';
 const path_to_images_set = {
   of_all_formats: PATH_TO.source.images + '**/*.{png,jpg,svg}',
   of_bitmaps: PATH_TO.source.images + '**/*.{png,jpg}',
-  of_svg_icons: PATH_TO.source.images + '**/icon-*.svg',
+  of_svg_icons: PATH_TO.source.images + '**/{logo,icon-*}.svg',
 };
 
 
@@ -47,7 +47,8 @@ export const images = () => {
       }),
       imagemin.svgo({
         plugins: [{
-          removeViewBox: false
+          removeViewBox: false,
+          removeUselessStrokeAndFill: true
         }]
       })
     ]),
