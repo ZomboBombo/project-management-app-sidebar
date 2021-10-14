@@ -34,7 +34,7 @@ const path_to_images_set = {
 
 
 // *** Оптимизация изображений ***
-export const images = () => {
+export const optimizeImages = () => {
   return Utils.pipeline(
     src(path_to_images_set.of_all_formats),
     imagemin([
@@ -93,6 +93,6 @@ export const sprite = () => {
 
 // *** Функция для ручной оптимизации изображений ***
 export const imagesoptimisation = () => {
-  images();
+  optimizeImages();
   transformToWebp();
 };
