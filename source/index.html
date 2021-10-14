@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,26 +14,124 @@
   <body>
     <!--
       ==================
-      --- SVG-спрайт ---
+      ### SVG-спрайт ###
       ==================
     -->
     <div class="visually-hidden">
       <include src="build/img/sprite.svg"></include>
     </div>
 
-    <h1>Привет, мир!</h1>
+    <div class="container site-wrapper">
+      <aside class="sidebar">
+        <h1 class="visually-hidden">Приложение для управления проектами</h1>
 
-    <button type="button">
-      <svg width="40" height="40">
-        <use xlink:href="#icon-search"></use>
-      </svg>
-    </button>
+        <header class="sidebar__header sidebar-header">
+          <button type="button" class="sidebar-header__toggle-button" title="Открыть/закрыть боковую панель" aria-label="Открыть/закрыть боковую панель">
+            Открыть/закрыть боковую панель
 
-    <button type="button">
-      <svg width="40" height="40">
-        <use xlink:href="#icon-folder"></use>
-      </svg>
-    </button>
+            <svg width="82" height="32" class="sidebar-header__logo">
+              <use xlink:href="#logo"></use>
+            </svg>
+          </button>
+        </header>
+
+        <section class="sidebar__navigation">
+          <h2 class="visually-hidden">Навигационное меню</h2>
+
+          <div class="sidebar__navigation-search sidebar-search">
+            <svg width="20" height="20" class="sidebar-search__icon">
+              <use xlink:href="#icon-search"></use>
+            </svg>
+
+            <input type="search" class="sidebar-search__input" placeholder="Search...">
+            <button type="button" class="sidebar-search__submit-button" aria-label="Найти интересующую информацию">Найти</button>
+          </div>
+
+          <nav class="navigation-menu">
+            <ul class="navigation-menu__list">
+              <li class="navigation-menu__list-item">
+                <a href="#" class="navigation-menu__list-link" title="Отобразить Главную страницу приложения" aria-label="Отобразить Главную страницу приложения">Главная</a>
+              </li>
+              <li class="navigation-menu__list-item">
+                <a href="#" class="navigation-menu__list-link" title="Показать входящие сообщения" aria-label="Показать входящие сообщения">Входящие</a>
+              </li>
+              <li class="navigation-menu__list-item">
+                <a href="#" class="navigation-menu__list-link" title="Отобразить список текущих задач" aria-label="Отобразить список текущих задач">Задачи</a>
+              </li>
+              <li class="navigation-menu__list-item">
+                <a href="#" class="navigation-menu__list-link" title="Показать суточную активность" aria-label="Показать суточную активность">Активность</a>
+              </li>
+              <li class="navigation-menu__list-item">
+                <a href="#" class="navigation-menu__list-link" title="Отобразить список членов Вашей команды" aria-label="Отобразить список членов Вашей команды">Команда</a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <section class="sidebar__projects projects">
+          <h2 class="visually-hidden">Проекты компании</h2>
+
+          <div class="projects__wrapper">
+            <button type="button" class="projects__open-list-button">Проекты</button>
+
+            <ul class="projects__list">
+              <li class="projects__list-item">
+                <a href="#" class="projects__list-link" title="Показать список дизайн-проектов" aria-label="Показать список дизайн-проектов">Дизайн</a>
+              </li>
+              <li class="projects__list-item">
+                <a href="#" class="projects__list-link" title="Показать список веб-проектов" aria-label="Показать список веб-проектов">Веб</a>
+              </li>
+              <li class="projects__list-item">
+                <a href="#" class="projects__list-link" title="Показать список проектов, находящихся в редактуре" aria-label="Показать список проектов, находящихся в редактуре">Редактура</a>
+              </li>
+            </ul>
+          </div>
+
+          <button type="button" class="projects__create-project-button">
+            <svg width="16" height="16" class="sidebar-search__icon">
+              <use xlink:href="#icon-plus"></use>
+            </svg>
+
+            Создать проект
+          </button>
+        </section>
+
+        <footer class="sidebar__footer sidebar-footer">
+          <div class="sidebar-footer__user-avatar">
+            <picture>
+              <source type="image/webp" srcset="img/avatar.webp, img/avatar@2x.webp 2x">
+
+              <!--
+                *** 1x: w-40px, h-40px
+                *** 2x: w-80px, h-80px
+              -->
+              <img src="img/avatar.jpg" srcset="img/avatar@wx.jpg 2x" width="40" height="40" alt="Аватар пользователя">
+            </picture>
+          </div>
+
+          <div class="sidebar-footer__user-info user-info">
+            <p class="user-info__basic">
+              <b class="user-info__name">Сергей Новиков</b>
+              <span class="user-info__speciality">Фронтенд-разработчик</span>
+            </p>
+
+            <a href="#" class="user-info__more-link" title="Показать подробную информацию о пользователе" aria-label="Показать подробную информацию о пользователе">Больше информации...</a>
+          </div>
+        </footer>
+      </aside>
+
+      <div class="site-content">
+        <header class="site-header">
+          <h2>Шапка</h2>
+        </header>
+        <main class="site-main-content">
+          <h2 class="section-title">Студия Евгения Лепёхина</h2>
+        </main>
+        <footer class="site-footer">
+          <h2>Подвал</h2>
+        </footer>
+      </div>
+    </div>
 
     <script src="js/main.js"></script>
   </body>
