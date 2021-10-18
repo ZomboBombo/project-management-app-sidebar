@@ -1,0 +1,28 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-width: 98px;
+  min-height: 100vh;
+
+  background-color: $dark-theme--background-color;
+}
+
+.sidebar__inner-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 24px;
+  padding-top: 32px;
+}
+
+.sidebar__navigation {
+  padding: 0;
+  padding-bottom: 40px;
+
+  border-bottom: 1px solid $line-color;
+}

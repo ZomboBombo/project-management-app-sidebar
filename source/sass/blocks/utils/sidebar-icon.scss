@@ -1,0 +1,13 @@
+.sidebar-icon {
+  position: absolute;
+  top: 50%;
+  left: $sidebar-icon--padding-left;
+  transform: translateY(-50%);
+
+  width: $sidebar-icon--width;
+  height: $sidebar-icon--height;
+
+  margin: auto;
+
+  fill: transparent;
+}

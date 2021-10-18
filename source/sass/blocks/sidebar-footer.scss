@@ -1,0 +1,20 @@
+.sidebar-footer {
+  display: flex;
+
+  width: 100%;
+  min-height: 88px;
+
+  margin: 0 auto;
+  padding: 24px;
+
+  background-color: $dark-theme--sidebar-header-and-footer;
+}
+
+.sidebar-footer__user-avatar {
+  position: relative;
+  
+  display: block;
+
+  border: none;
+  border-radius: 50%;
+}

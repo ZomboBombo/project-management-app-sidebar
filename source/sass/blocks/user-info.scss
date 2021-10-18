@@ -1,0 +1,81 @@
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+
+  margin: 0 auto;
+  margin-left: 16px;
+}
+
+.user-info__basic {
+  margin: 0;
+  padding: 0;
+
+  font-size: 0;
+  font-weight: 0;
+  line-height: 0;
+}
+
+.user-info__name {
+  display: block;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: $white;
+}
+
+.user-info__speciality {
+  margin: 0;
+  padding: 0;
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #a1a1aa;
+}
+
+.user-info__more-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 0;
+  vertical-align: middle;
+  text-decoration: none;
+
+  border: none;
+  border-radius: 4px;
+
+  $properties-for-transition: background-color, opacity;
+
+  @include transition-settings($properties-for-transition);
+}
+
+.user-info__more-link-icon {
+  opacity: 0.6;
+
+  $properties-for-transition: opacity;
+
+  @include transition-settings($properties-for-transition);
+}
+
+
+/*
+*** Стили состояний элементов ***
+*/
+.user-info__more-link:hover,
+.user-info__more-link:focus {
+  background-color: $dark-theme--hover;
+}
+
+.user-info__more-link:active {
+  opacity: 0.7;
+}
+
+.user-info__more-link:hover > .user-info__more-link-icon,
+.user-info__more-link:focus > .user-info__more-link-icon {
+  opacity: 1;
+}
