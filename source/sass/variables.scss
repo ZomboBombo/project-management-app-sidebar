@@ -14,3 +14,32 @@ $primary-font: "Inter", "Arial", sans-serif;
 // *** для Цветов ***
 $white: #ffffff;
 $black: #000000;
+
+$body-background-color: hsl(240, 6%, 20%);
+$notification-color: #8b5cf6;
+$important-button-color: #7c3aed;
+$important-button-color--hover: #8b5cf6;
+$line-color: rgba(#71717a, 0.5);
+$search-field-border: #3f3f46;
+
+$dark-theme--background-color: #18181b;
+$dark-theme--sidebar-header-and-footer: #27272a;
+$dark-theme--hover: rgba(255, 255, 255, 0.2);
+
+$light-theme--background-color: #ffffff;
+$light-theme--sidebar-header-and-footer: #f9fafb;
+$light-theme--hover: rgba(124, 58, 237, 0.2);
+
+
+// *** для Размеров ***
+$FIXED_PROJECT_LINK_PADDING_COEFFICIENT: 16px;
+
+$sidebar-icon--width: 20px;
+$sidebar-icon--height: 20px;
+$sidebar-icon--padding-left: 18px;
+$sidebar-icon--padding-right: 12px;
+$sidebar-padding--left: (
+  $sidebar-icon--padding-left
+  + $sidebar-icon--padding-right
+  + $sidebar-icon--width
+);
