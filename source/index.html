@@ -35,79 +35,116 @@
           </button>
         </header>
 
-        <section class="sidebar__navigation">
-          <h2 class="visually-hidden">Навигационное меню</h2>
+        <div class="sidebar__inner-wrapper">
+          <section class="sidebar__navigation">
+            <h2 class="visually-hidden">Навигационное меню</h2>
 
-          <div class="sidebar__navigation-search sidebar-search">
-            <svg width="20" height="20" class="sidebar-search__icon">
-              <use xlink:href="#icon-search"></use>
-            </svg>
+            <div class="sidebar__navigation-search sidebar-search">
+              <svg width="20" height="20" class="sidebar-icon sidebar-search__icon">
+                <use xlink:href="#icon-search"></use>
+              </svg>
 
-            <input type="search" class="sidebar-search__input" placeholder="Search...">
-            <button type="button" class="sidebar-search__submit-button" aria-label="Найти интересующую информацию">Найти</button>
-          </div>
+              <input type="search" class="sidebar-search__input" placeholder="Search" title="Введите данные для поиска интересующей Вас информации" aria-label="Введите данные для поиска интересующей Вас информации">
 
-          <nav class="navigation-menu">
-            <ul class="navigation-menu__list">
-              <li class="navigation-menu__list-item">
-                <a href="#" class="navigation-menu__list-link" title="Отобразить Главную страницу приложения" aria-label="Отобразить Главную страницу приложения">Главная</a>
-              </li>
-              <li class="navigation-menu__list-item">
-                <a href="#" class="navigation-menu__list-link" title="Показать входящие сообщения" aria-label="Показать входящие сообщения">Входящие</a>
-              </li>
-              <li class="navigation-menu__list-item">
-                <a href="#" class="navigation-menu__list-link" title="Отобразить список текущих задач" aria-label="Отобразить список текущих задач">Задачи</a>
-              </li>
-              <li class="navigation-menu__list-item">
-                <a href="#" class="navigation-menu__list-link" title="Показать суточную активность" aria-label="Показать суточную активность">Активность</a>
-              </li>
-              <li class="navigation-menu__list-item">
-                <a href="#" class="navigation-menu__list-link" title="Отобразить список членов Вашей команды" aria-label="Отобразить список членов Вашей команды">Команда</a>
-              </li>
-            </ul>
-          </nav>
-        </section>
+              <button type="button" class="sidebar-search__submit-button" aria-label="Найти интересующую информацию">Найти</button>
+            </div>
 
-        <section class="sidebar__projects projects">
-          <h2 class="visually-hidden">Проекты компании</h2>
+            <nav class="navigation-menu">
+              <ul class="navigation-menu__list">
+                <li class="navigation-menu__list-item">
+                  <a href="#" class="navigation-menu__link" title="Отобразить Главную страницу приложения" aria-label="Отобразить Главную страницу приложения">
+                    <svg width="20" height="20" class="sidebar-icon navigation-menu__link-icon">
+                      <use xlink:href="#icon-home"></use>
+                    </svg>
 
-          <div class="projects__wrapper">
-            <button type="button" class="projects__open-list-button">Проекты</button>
+                    Главная
+                  </a>
+                </li>
+                <li class="navigation-menu__list-item">
+                  <a href="#" class="navigation-menu__link" title="Показать входящие сообщения" aria-label="Показать входящие сообщения">
+                    <svg width="20" height="20" class="sidebar-icon navigation-menu__link-icon">
+                      <use xlink:href="#icon-inbox"></use>
+                    </svg>
 
-            <ul class="projects__list">
-              <li class="projects__list-item">
-                <a href="#" class="projects__list-link" title="Показать список дизайн-проектов" aria-label="Показать список дизайн-проектов">Дизайн</a>
-              </li>
-              <li class="projects__list-item">
-                <a href="#" class="projects__list-link" title="Показать список веб-проектов" aria-label="Показать список веб-проектов">Веб</a>
-              </li>
-              <li class="projects__list-item">
-                <a href="#" class="projects__list-link" title="Показать список проектов, находящихся в редактуре" aria-label="Показать список проектов, находящихся в редактуре">Редактура</a>
-              </li>
-            </ul>
-          </div>
+                    Входящие
+                  </a>
+                </li>
+                <li class="navigation-menu__list-item">
+                  <a href="#" class="navigation-menu__link" title="Отобразить список текущих задач" aria-label="Отобразить список текущих задач">
+                    <svg width="20" height="20" class="sidebar-icon navigation-menu__link-icon">
+                      <use xlink:href="#icon-list"></use>
+                    </svg>
 
-          <button type="button" class="projects__create-project-button">
-            <svg width="16" height="16" class="sidebar-search__icon">
-              <use xlink:href="#icon-plus"></use>
-            </svg>
+                    Задачи
+                  </a>
+                </li>
+                <li class="navigation-menu__list-item">
+                  <a href="#" class="navigation-menu__link" title="Показать суточную активность" aria-label="Показать суточную активность">
+                    <svg width="20" height="20" class="sidebar-icon navigation-menu__link-icon">
+                      <use xlink:href="#icon-activity"></use>
+                    </svg>
 
-            Создать проект
-          </button>
-        </section>
+                    Активность
+                  </a>
+                </li>
+                <li class="navigation-menu__list-item">
+                  <a href="#" class="navigation-menu__link" title="Отобразить список членов Вашей команды" aria-label="Отобразить список членов Вашей команды">
+                    <svg width="20" height="20" class="sidebar-icon navigation-menu__link-icon">
+                      <use xlink:href="#icon-users"></use>
+                    </svg>
+
+                    Команда
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </section>
+
+          <section class="sidebar__projects projects">
+            <h2 class="visually-hidden">Проекты компании</h2>
+
+            <div class="projects__wrapper">
+              <button type="button" class="projects__open-list-button">
+                <svg width="20" height="20" class="sidebar-icon projects__open-list-button-icon">
+                  <use xlink:href="#icon-folder"></use>
+                </svg>
+
+                Проекты
+              </button>
+
+              <ul class="projects__list">
+                <li class="projects__list-item">
+                  <a href="#" class="projects__list-link" title="Показать список дизайн-проектов" aria-label="Показать список дизайн-проектов">Дизайн</a>
+                </li>
+                <li class="projects__list-item">
+                  <a href="#" class="projects__list-link" title="Показать список веб-проектов" aria-label="Показать список веб-проектов">Веб</a>
+                </li>
+                <li class="projects__list-item">
+                  <a href="#" class="projects__list-link" title="Показать список проектов, находящихся в редактуре" aria-label="Показать список проектов, находящихся в редактуре">Редактура</a>
+                </li>
+              </ul>
+            </div>
+
+            <button type="button" class="projects__create-project-button">
+              <svg width="16" height="16" class="projects__create-project-button-icon">
+                <use xlink:href="#icon-plus"></use>
+              </svg>
+
+              Создать проект
+            </button>
+          </section>
+        </div>
 
         <footer class="sidebar__footer sidebar-footer">
-          <div class="sidebar-footer__user-avatar">
-            <picture>
-              <source type="image/webp" srcset="img/avatar.webp, img/avatar@2x.webp 2x">
+          <picture>
+            <source srcset="img/avatar.webp, img/avatar@2x.webp 2x" type="image/webp">
 
-              <!--
-                *** 1x: w-40px, h-40px
-                *** 2x: w-80px, h-80px
-              -->
-              <img src="img/avatar.jpg" srcset="img/avatar@wx.jpg 2x" width="40" height="40" alt="Аватар пользователя">
-            </picture>
-          </div>
+            <!--
+              *** 1x: w-40px, h-40px
+              *** 2x: w-80px, h-80px
+            -->
+            <img src="img/avatar.jpg" srcset="img/avatar@2x.jpg 2x" width="40" height="40" class="sidebar-footer__user-avatar" alt="Аватар пользователя">
+          </picture>
 
           <div class="sidebar-footer__user-info user-info">
             <p class="user-info__basic">
@@ -115,20 +152,26 @@
               <span class="user-info__speciality">Фронтенд-разработчик</span>
             </p>
 
-            <a href="#" class="user-info__more-link" title="Показать подробную информацию о пользователе" aria-label="Показать подробную информацию о пользователе">Больше информации...</a>
+            <a href="#" class="user-info__more-link" title="Показать подробную информацию о пользователе" aria-label="Показать подробную информацию о пользователе">
+              Больше информации...
+
+              <svg width="24" height="24" class="user-info__more-link-icon">
+                <use xlink:href="#icon-more--vertical"></use>
+              </svg>
+            </a>
           </div>
         </footer>
       </aside>
 
       <div class="site-content">
         <header class="site-header">
-          <h2>Шапка</h2>
+          <h2 class="section-title site-header__title">Шапка</h2>
         </header>
         <main class="site-main-content">
           <h2 class="section-title">Студия Евгения Лепёхина</h2>
         </main>
         <footer class="site-footer">
-          <h2>Подвал</h2>
+          <h2 class="section-title">Подвал</h2>
         </footer>
       </div>
     </div>
