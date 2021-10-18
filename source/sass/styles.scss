@@ -10,10 +10,12 @@
 @import "global";
 
 
-/* ***************************
-*** 2. Универсальные стили ***
-*************************** */
-@import "blocks/container.scss";
+/* *************************
+*** 2. Утилитарные стили ***
+************************* */
+@import "blocks/utils/container";
+@import "blocks/utils/section-title";
+@import "blocks/utils/sidebar-icon";
 
 
 /* **********************
@@ -21,5 +23,17 @@
 ********************** */
 
 // --- 3.1) стили для Главных контентных блоков ---
+@import "blocks/site-wrapper";
+@import "blocks/site-content";
+@import "blocks/site-header";
+@import "blocks/site-main-content";
+@import "blocks/site-footer";
 
-
+// --- 3.2) стили для Бокового меню (Сайдбара) ---
+@import "blocks/sidebar";
+@import "blocks/sidebar-header";
+@import "blocks/sidebar-search";
+@import "blocks/navigation-menu";
+@import "blocks/projects";
+@import "blocks/sidebar-footer";
+@import "blocks/user-info";
