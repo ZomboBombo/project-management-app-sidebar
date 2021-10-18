@@ -29,6 +29,8 @@ body {
   line-height: 27px;
   color: $black;
 
+  background-color: $body-background-color;
+
   // *** Для устранения горизонтальных скроллов в IE 11, Edge и Safari ***
   overflow-x: hidden;
 }
