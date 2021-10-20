@@ -1,0 +1,99 @@
+/*
+ * === Данный класс предназначен для управления
+ * === поведением дочерних элементов Сайдбара,
+ * === когда его состояние определяется, как "Закрыт" (или "Свёрнут")
+ */
+
+.closed-sidebar {
+  width: 98px;
+
+  /*
+  * --- Мини-натсройка для того, чтобы при "свёрнутом" сайдбаре
+  * --- никакие элементы не выходили за границы панели сайдбара
+  */ 
+  overflow-x: hidden;
+
+
+  & .sidebar__inner-wrapper {
+    padding: 31px;
+  }
+
+  & .sidebar-header__logo {
+    opacity: 0;
+  }
+
+
+  & .sidebar-icon {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+  & .sidebar-search__icon {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  & .sidebar-search__input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 36px;
+    height: 36px;
+
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+  }
+
+  & .sidebar-search__submit-button {
+    display: none;
+  }
+
+
+  & .navigation-menu__link,
+  & .projects__open-list-button {
+    width: 36px;
+    height: 36px;
+
+    margin: 0;
+    padding: 0;
+
+    font-size: 0;
+  }
+
+  & .projects__create-project-button {
+    width: 36px;
+    height: 36px;
+
+    padding: 0;
+
+    font-size: 0;
+    color: transparent;
+  }
+
+  & .projects__create-project-button-icon {
+    margin: 0 auto;
+  }
+
+
+  & .sidebar-footer {
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .sidebar-footer__user-avatar {
+    margin: auto;
+  }
+
+  & .user-info {
+    display: none;
+  }
+}
