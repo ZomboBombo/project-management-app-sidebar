@@ -22,11 +22,11 @@
     </div>
 
     <div class="container site-wrapper">
-      <aside class="sidebar">
+      <aside class="sidebar" id="sidebar">
         <h1 class="visually-hidden">Приложение для управления проектами</h1>
 
         <header class="sidebar__header sidebar-header">
-          <button type="button" class="sidebar-header__toggle-button" title="Открыть/закрыть боковую панель" aria-label="Открыть/закрыть боковую панель">
+          <button type="button" class="sidebar-header__toggle-button" id="sidebar-toggle-button" title="Открыть/закрыть боковую панель" aria-label="Открыть/закрыть боковую панель">
             Открыть/закрыть боковую панель
 
             <svg width="82" height="32" class="sidebar-header__logo">
@@ -100,11 +100,11 @@
             </nav>
           </section>
 
-          <section class="sidebar__projects projects">
+          <section class="sidebar__projects projects" id="projects-section">
             <h2 class="visually-hidden">Проекты компании</h2>
 
             <div class="projects__wrapper">
-              <button type="button" class="projects__open-list-button">
+              <button type="button" class="projects__open-list-button" id="projects-open-button">
                 <svg width="20" height="20" class="sidebar-icon projects__open-list-button-icon">
                   <use xlink:href="#icon-folder"></use>
                 </svg>
@@ -112,7 +112,7 @@
                 Проекты
               </button>
 
-              <ul class="projects__list">
+              <ul class="projects__list" id="projects-list">
                 <li class="projects__list-item">
                   <a href="#" class="projects__list-link" title="Показать список дизайн-проектов" aria-label="Показать список дизайн-проектов">Дизайн</a>
                 </li>
@@ -164,13 +164,13 @@
       </aside>
 
       <div class="site-content">
-        <header class="site-header">
+        <header class="site-content__section site-header">
           <h2 class="section-title site-header__title">Шапка</h2>
         </header>
-        <main class="site-main-content">
+        <main class="site-content__section site-main-content">
           <h2 class="section-title">Студия Евгения Лепёхина</h2>
         </main>
-        <footer class="site-footer">
+        <footer class="site-content__section site-footer">
           <h2 class="section-title">Подвал</h2>
         </footer>
       </div>
