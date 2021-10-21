@@ -41,6 +41,13 @@ footer {
 }
 
 
+// --- Нормалайз для ширины/высоты <picture>-контейнера ---
+picture {
+  width: auto;
+  height: auto;
+}
+
+
 // === Класс для доступного сокрытия элементов ===
 .visually-hidden {
   width: 1px;
