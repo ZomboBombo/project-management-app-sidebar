@@ -4,6 +4,9 @@
   display: flex;
   justify-content: space-between;
 
+  width: auto;
+  min-height: 36px;
+
   margin: 0 auto;
   padding: 0;
 
@@ -13,6 +16,10 @@
 
 .sidebar-search__icon {
   opacity: 1;
+
+  $properties-for-transition: left;
+
+  @include transition-settings($properties-for-transition); 
 }
 
 .sidebar-search__input {
@@ -35,6 +42,7 @@
   border: none;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
+
   $properties-for-transition: background-color, opacity;
 
   @include transition-settings($properties-for-transition);
@@ -55,9 +63,9 @@
   max-width: 80px;
   height: auto;
 
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 20px;
+  line-height: 18px;
   color: $white;
 
   background-color: $important-button-color;

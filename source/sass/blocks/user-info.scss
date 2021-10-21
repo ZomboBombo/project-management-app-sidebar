@@ -7,6 +7,10 @@
 
   margin: 0 auto;
   margin-left: 16px;
+
+  $properties-for-transition: width, opacity;
+
+  @include transition-settings($properties-for-transition);
 }
 
 .user-info__basic {

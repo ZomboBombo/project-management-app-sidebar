@@ -10,6 +10,12 @@
   background-color: $dark-theme--sidebar-header-and-footer;
 }
 
+.sidebar-footer picture {
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+
 .sidebar-footer__user-avatar {
   position: relative;
   

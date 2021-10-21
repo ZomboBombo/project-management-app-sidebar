@@ -4,9 +4,14 @@
 
   width: 100%;
   min-width: 98px;
+  max-width: 342px;
   min-height: 100vh;
 
   background-color: $dark-theme--background-color;
+
+  $properties-for-transition: width;
+
+  @include transition-settings($properties-for-transition);
 }
 
 .sidebar__inner-wrapper {
@@ -18,6 +23,10 @@
 
   padding: 24px;
   padding-top: 32px;
+
+  $properties-for-transition: padding;
+
+  @include transition-settings($properties-for-transition);
 }
 
 .sidebar__navigation {

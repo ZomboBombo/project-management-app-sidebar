@@ -1,0 +1,10 @@
+.site-content {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+.site-content__section {
+  flex-grow: 1;
+}

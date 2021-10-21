@@ -1,8 +1,5 @@
 .site-wrapper {
-  display: grid;
-  grid-template-columns: minmax(98px, 342px) 1fr;
-
+  display: flex;
   background-color: $white;
-
   box-shadow: 0 0 20px 0 rgba($white, 0.3);
 }

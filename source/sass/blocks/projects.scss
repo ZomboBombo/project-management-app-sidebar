@@ -6,6 +6,10 @@
   height: 100%;
 }
 
+.projects__wrapper {
+  margin-top: 40px;
+}
+
 .projects__open-list-button {
   position: relative;
 
@@ -15,7 +19,6 @@
   min-height: 36px;
 
   margin: 0;
-  margin-top: 40px;
   padding: 0;
   padding-left: $sidebar-padding--left;
 
@@ -40,10 +43,28 @@
 
 .projects__list {
   @include markerless;
+
+  height: 100%;
+  opacity: 1;
+
+  $properties-for-transition: height, margin, opacity;
+
+  @include transition-settings($properties-for-transition);  
+}
+
+.projects__list--closed {
+  height: 0;
+  margin-top: -10px;
+  opacity: 0;
+  overflow: hidden;
 }
 
 .projects__list-item {
   position: relative;
+
+  $properties-for-transition: height, font-size;
+
+  @include transition-settings($properties-for-transition);  
 
   &::before {
     content: '';
@@ -62,7 +83,6 @@
     border: none;
     border-radius: 2px;
   }
-
   
   // *** Цветовая схема для элементов списка Проектов ***
 
@@ -105,7 +125,7 @@
 
   opacity: 0.6;
 
-  $properties-for-transition: background-color, opacity;
+  $properties-for-transition: height, font-size, background-color, opacity;
 
   @include transition-settings($properties-for-transition);
 }
@@ -133,7 +153,7 @@
 
   cursor: pointer;
 
-  $properties-for-transition: background-color, opacity;
+  $properties-for-transition: font-size, background-color, opacity;
 
   @include transition-settings($properties-for-transition);
 }
