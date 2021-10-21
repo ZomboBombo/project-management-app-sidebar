@@ -34,10 +34,14 @@ $light-theme--hover: rgba(124, 58, 237, 0.2);
 // *** для Размеров ***
 $FIXED_PROJECT_LINK_PADDING_COEFFICIENT: 16px;
 
+$sidebar-icon-box--width: 36px;
+$sidebar-icon-box--height: 36px;
+
 $sidebar-icon--width: 20px;
 $sidebar-icon--height: 20px;
 $sidebar-icon--padding-left: 18px;
 $sidebar-icon--padding-right: 12px;
+
 $sidebar-padding--left: (
   $sidebar-icon--padding-left
   + $sidebar-icon--padding-right
