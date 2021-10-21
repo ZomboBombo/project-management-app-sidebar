@@ -8,33 +8,33 @@
   width: 98px;
 
   /*
-  * --- Мини-натсройка для того, чтобы при "свёрнутом" сайдбаре
+  * --- Мини-наcтройка для того, чтобы при "свёрнутом" сайдбаре
   * --- никакие элементы не выходили за границы панели сайдбара
   */ 
   overflow-x: hidden;
 
 
+  // ---------------===-------------- Общие стили для Сайдбара --------------===---------------
   & .sidebar__inner-wrapper {
     padding: 31px;
+    padding-top: 32px;
   }
 
   & .sidebar-header__logo {
     opacity: 0;
   }
 
-
   & .sidebar-icon {
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+    $left-side-positioning: calc(($sidebar-icon-box--width / 2) - ($sidebar-icon--width / 2));
+    left: $left-side-positioning;
+
+    transform: translateY(-50%);
   }
 
 
-  & .sidebar-search__icon {
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
+  // --------------===------------- Стили для Поиска и его эл-тов -------------===-------------
   & .sidebar-search__input {
     position: absolute;
     top: 50%;
@@ -58,6 +58,7 @@
   }
 
 
+  // ------===------ Стили для Навигационного меню и подобных по виду элементов ------===------
   & .navigation-menu__link,
   & .projects__open-list-button {
     width: 36px;
@@ -65,35 +66,58 @@
 
     margin: 0;
     padding: 0;
-
-    font-size: 0;
   }
 
+  & .navigation-menu__link-text,
+  & .projects__open-list-button-text {
+    opacity: 0;
+    color: transparent;
+  }
+
+
+  // -------------===------------ Стили для эл-тов секции "Проекты" ------------===------------
   & .projects__create-project-button {
     width: 36px;
     height: 36px;
 
     padding: 0;
+  }
 
+  & .projects__create-project-button-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  & .projects__create-project-button-text {
     font-size: 0;
     color: transparent;
   }
 
-  & .projects__create-project-button-icon {
-    margin: 0 auto;
-  }
-
-
+  
+  // -----------===------------ Общие стили для «Подвала» Сайдабара ------------===------------
   & .sidebar-footer {
-    justify-content: center;
     align-items: center;
+
+    padding-top: 24px;
+    padding-right: 29px;
+    padding-bottom: 24px;
+    padding-left: 29px;
   }
 
-  & .sidebar-footer__user-avatar {
-    margin: auto;
-  }
 
+  // ----------===----------- Стили для блока Пользовательской инф-ции -----------===----------
   & .user-info {
-    display: none;
+    width: 0;
+    height: 0;
+
+    opacity: 0;
+  }
+
+  & .user-info__basic,
+  & .user-info__name,
+  & .user-info__speciality {
+    font-size: 0;
   }
 }

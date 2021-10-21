@@ -8,12 +8,15 @@
   padding: 24px;
 
   background-color: $dark-theme--sidebar-header-and-footer;
+
+  $properties-for-transition: padding;
+
+  @include transition-settings($properties-for-transition);
 }
 
-.sidebar-footer picture {
-  width: auto;
-  height: auto;
+.sidebar-footer__user-avatar-box {
   margin: auto;
+  margin-left: 0;
 }
 
 .sidebar-footer__user-avatar {

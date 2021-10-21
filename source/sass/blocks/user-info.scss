@@ -4,13 +4,18 @@
   align-items: center;
 
   width: 100%;
+  min-width: max-content;
+  max-height: 100%;
 
   margin: 0 auto;
   margin-left: 16px;
+  
+  opacity: 1;
 
-  $properties-for-transition: width, opacity;
+  $properties-for-transition: width, height, opacity;
 
   @include transition-settings($properties-for-transition);
+
 }
 
 .user-info__basic {
@@ -20,18 +25,32 @@
   font-size: 0;
   font-weight: 0;
   line-height: 0;
+
+  $properties-for-transition: font-size, opacity;
+
+  @include transition-settings($properties-for-transition);
 }
 
 .user-info__name {
   display: block;
 
+  width: 100%;
+  min-width: max-content;
+
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
   color: $white;
+
+  transition: inherit;
 }
 
 .user-info__speciality {
+  display: inline-block;
+
+  width: 100%;
+  min-width: max-content;
+
   margin: 0;
   padding: 0;
 
@@ -39,6 +58,8 @@
   font-weight: 500;
   line-height: 16px;
   color: #a1a1aa;
+
+  transition: inherit;
 }
 
 .user-info__more-link {

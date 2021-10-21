@@ -33,7 +33,13 @@
 
   opacity: 0.6;
 
-  $properties-for-transition: background-color, opacity;
+  $properties-for-transition: width, height, padding, background-color, opacity;
+
+  @include transition-settings($properties-for-transition);
+}
+
+.navigation-menu__link-text {
+  $properties-for-transition: color, opacity;
 
   @include transition-settings($properties-for-transition);
 }
