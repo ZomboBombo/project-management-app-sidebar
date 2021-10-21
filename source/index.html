@@ -57,7 +57,7 @@
                       <use xlink:href="#icon-home"></use>
                     </svg>
 
-                    Главная
+                    <span class="navigation-menu__link-text">Главная</span>
                   </a>
                 </li>
                 <li class="navigation-menu__list-item">
@@ -66,7 +66,7 @@
                       <use xlink:href="#icon-inbox"></use>
                     </svg>
 
-                    Входящие
+                    <span class="navigation-menu__link-text">Входящие</span>
                   </a>
                 </li>
                 <li class="navigation-menu__list-item">
@@ -75,7 +75,7 @@
                       <use xlink:href="#icon-list"></use>
                     </svg>
 
-                    Задачи
+                    <span class="navigation-menu__link-text">Задачи</span>
                   </a>
                 </li>
                 <li class="navigation-menu__list-item">
@@ -84,7 +84,7 @@
                       <use xlink:href="#icon-activity"></use>
                     </svg>
 
-                    Активность
+                    <span class="navigation-menu__link-text">Активность</span>
                   </a>
                 </li>
                 <li class="navigation-menu__list-item">
@@ -93,7 +93,7 @@
                       <use xlink:href="#icon-users"></use>
                     </svg>
 
-                    Команда
+                    <span class="navigation-menu__link-text">Команда</span>
                   </a>
                 </li>
               </ul>
@@ -109,7 +109,7 @@
                   <use xlink:href="#icon-folder"></use>
                 </svg>
 
-                Проекты
+                <span class="projects__open-list-button-text">Проекты</span>
               </button>
 
               <ul class="projects__list" id="projects-list">
@@ -130,21 +130,23 @@
                 <use xlink:href="#icon-plus"></use>
               </svg>
 
-              Создать проект
+              <span class="projects__create-project-button-text">Создать проект</span>
             </button>
           </section>
         </div>
 
         <footer class="sidebar__footer sidebar-footer">
-          <picture>
-            <source srcset="img/avatar.webp, img/avatar@2x.webp 2x" type="image/webp">
+          <div class="sidebar-footer__user-avatar-box">
+            <picture>
+              <source srcset="img/avatar.webp, img/avatar@2x.webp 2x" type="image/webp">
 
-            <!--
-              *** 1x: w-40px, h-40px
-              *** 2x: w-80px, h-80px
-            -->
-            <img src="img/avatar.jpg" srcset="img/avatar@2x.jpg 2x" width="40" height="40" class="sidebar-footer__user-avatar" alt="Аватар пользователя">
-          </picture>
+              <!--
+                *** 1x: w-40px, h-40px
+                *** 2x: w-80px, h-80px
+              -->
+              <img src="img/avatar.jpg" srcset="img/avatar@2x.jpg 2x" width="40" height="40" class="sidebar-footer__user-avatar" alt="Аватар пользователя">
+            </picture>
+          </div>
 
           <div class="sidebar-footer__user-info user-info">
             <p class="user-info__basic">
