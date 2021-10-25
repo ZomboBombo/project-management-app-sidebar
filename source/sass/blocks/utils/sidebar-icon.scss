@@ -10,8 +10,9 @@
   margin: auto;
 
   fill: transparent;
+  stroke: $white;
 
-  $properties-for-transition: top, left, width, height, margin, padding, opacity, fill;
+  $properties-for-transition: top, left, width, height, margin, padding, opacity, fill, stroke;
 
   @include transition-settings($properties-for-transition);
 }

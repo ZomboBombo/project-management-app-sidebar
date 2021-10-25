@@ -10,8 +10,12 @@
   margin: 0 auto;
   padding: 0;
 
-  border: 1px solid $search-field-border;
+  border: 1px solid $search-field-border--dark;
   border-radius: 4px;
+
+  $properties-for-transition: border;
+
+  @include transition-settings($properties-for-transition);
 }
 
 .sidebar-search__icon {
@@ -19,7 +23,7 @@
 
   $properties-for-transition: left;
 
-  @include transition-settings($properties-for-transition); 
+  @include transition-settings($properties-for-transition);
 }
 
 .sidebar-search__input {

@@ -9,7 +9,7 @@
 
   background-color: $dark-theme--background-color;
 
-  $properties-for-transition: width;
+  $properties-for-transition: width, background-color;
 
   @include transition-settings($properties-for-transition);
 }

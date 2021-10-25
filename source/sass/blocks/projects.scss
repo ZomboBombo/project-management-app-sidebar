@@ -138,7 +138,7 @@
 
   opacity: 0.6;
 
-  $properties-for-transition: height, font-size, background-color, opacity;
+  $properties-for-transition: height, font-size, color, background-color, opacity;
 
   @include transition-settings($properties-for-transition);
 }

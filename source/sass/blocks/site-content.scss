@@ -7,4 +7,19 @@
 
 .site-content__section {
   flex-grow: 1;
+
+  /*-- Каждый 4-ый эл-т, начиная с 1-го --*/
+  &:nth-child(3n + 1) {
+    background-color: rgba(red, 0.3);
+  }
+
+  /*-- Каждый 5-ый эл-т, начиная с 2-го --*/
+  &:nth-child(3n + 2) {
+    background-color: rgba(green, 0.3);
+  }
+
+  /*-- Каждый 6-ый эл-т, начиная с 3-го --*/
+  &:nth-child(3n + 3) {
+    background-color: rgba(blue, 0.3);
+  }
 }

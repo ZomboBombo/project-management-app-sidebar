@@ -9,7 +9,7 @@
 
   background-color: $dark-theme--sidebar-header-and-footer;
 
-  $properties-for-transition: padding;
+  $properties-for-transition: padding, background-color;
 
   @include transition-settings($properties-for-transition);
 }

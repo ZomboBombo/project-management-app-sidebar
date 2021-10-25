@@ -80,6 +80,7 @@
 }
 
 .user-info__more-link-icon {
+  stroke: $white;
   opacity: 0.6;
 
   $properties-for-transition: opacity;
