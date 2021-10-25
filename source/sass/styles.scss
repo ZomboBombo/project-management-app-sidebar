@@ -26,6 +26,7 @@
 @import "blocks/site-wrapper";
 @import "blocks/site-content";
 @import "blocks/site-header";
+@import "blocks/theme-switcher";
 @import "blocks/site-main-content";
 @import "blocks/site-footer";
 
@@ -38,3 +39,9 @@
 @import "blocks/projects";
 @import "blocks/sidebar-footer";
 @import "blocks/user-info";
+
+
+/* *****************************************
+*** 4. Стили альтернативных цветовых тем ***
+***************************************** */
+@import "blocks/light-theme";
