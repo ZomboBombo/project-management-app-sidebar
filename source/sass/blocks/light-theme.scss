@@ -1,0 +1,122 @@
+/*
+ * === Данный класс описывает состояние элементов
+ * === при активации альтернативной "Светлой" темы
+ */
+
+.light-theme {
+  // ---------------===-------------- Общие стили для Сайдбара --------------===---------------
+  & .sidebar {
+    background-color: $light-theme--background-color;
+  }
+
+  & .sidebar-header,
+  & .sidebar-header__toggle-button {
+    background-color: $light-theme--sidebar-header-and-footer
+  }
+
+  & .sidebar-header__logo {
+    fill: $black;
+  }
+
+  & .sidebar-icon {
+    stroke: $black;
+  }
+
+
+  // --------------===------------- Стили для Поиска и его эл-тов -------------===-------------
+  & .sidebar-search {
+    border-color: $search-field-border--light;
+  }
+
+  & .sidebar-search__input {
+    color: $black;
+  }
+
+  & .sidebar-search__input:hover,
+  & .sidebar-search__input:focus {
+    background-color: $light-theme--hover;
+  }
+
+  & .sidebar-search__input:hover::placeholder,
+  & .sidebar-search__input:focus::placeholder {
+    color: $light-theme--hover-element-content;
+  }
+
+
+  // ------===------ Стили для Навигационного меню и подобных по виду элементов ------===------
+  & .navigation-menu__link-text {
+    color: #52525b;
+  }
+
+  & .navigation-menu__link:hover,
+  & .navigation-menu__link:focus {
+    background-color: $light-theme--hover;
+  }
+
+  & .navigation-menu__link:hover > .navigation-menu__link-icon,
+  & .navigation-menu__link:focus > .navigation-menu__link-icon {
+    stroke: $light-theme--hover-element-content;
+  }
+
+  & .navigation-menu__link:hover > .navigation-menu__link-text,
+  & .navigation-menu__link:focus > .navigation-menu__link-text {
+    color: $light-theme--hover-element-content;
+  }
+
+
+  // -------------===------------ Стили для эл-тов секции "Проекты" ------------===------------
+  & .projects__open-list-button {
+    color: $black;
+  }
+
+  & .projects__list-link {
+    color: $black;
+  }
+
+  & .projects__open-list-button:hover,
+  & .projects__open-list-button:focus {
+    background-color: $light-theme--hover;
+  }
+
+  & .projects__open-list-button:hover > .projects__open-list-button-icon,
+  & .projects__open-list-button:focus > .projects__open-list-button-icon {
+    stroke: $light-theme--hover-element-content;
+  }
+
+  & .projects__open-list-button:hover > .projects__open-list-button-text,
+  & .projects__open-list-button:focus > .projects__open-list-button-text {
+    color: $light-theme--hover-element-content;
+  }
+
+  & .projects__list-link:hover,
+  & .projects__list-link:focus {
+    color: $light-theme--hover-element-content;
+    background-color: $light-theme--hover;
+  }
+
+
+  // -----------===------------ Общие стили для «Подвала» Сайдабара ------------===------------
+  & .sidebar-footer {
+    background-color: $light-theme--sidebar-header-and-footer;
+  }
+
+
+  // ----------===----------- Стили для блока Пользовательской инф-ции -----------===----------
+  & .user-info__name {
+    color: #3f3f46;
+  }
+
+  & .user-info__more-link-icon {
+    stroke: #3f3f46;
+  }
+
+  & .user-info__more-link:hover,
+  & .user-info__more-link:focus {
+    background-color: $light-theme--hover;
+  }
+
+  & .user-info__more-link:hover > .user-info__more-link-icon,
+  & .user-info__more-link:focus > .user-info__more-link-icon {
+    stroke: $light-theme--hover-element-content;
+  }
+}
