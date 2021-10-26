@@ -15,13 +15,31 @@
 }
 
 .sidebar-footer__user-avatar-box {
+  position: relative;
+
   margin: auto;
   margin-left: 0;
+
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    display: block;
+
+    width: 12px;
+    height: 12px;
+
+    background-color: #22c55e;
+    border: 2px solid white;
+    border-radius: 50%;
+  }
 }
 
-.sidebar-footer__user-avatar {
-  position: relative;
-  
+.sidebar-footer__user-avatar { 
   display: block;
 
   border: none;
