@@ -1,0 +1,31 @@
+.notification {
+  &::after {
+    content: attr(data-notification-count);
+
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 20px;
+    height: 20px;
+
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 14px;
+    text-align: center;
+    color: $white;
+
+    background-color: $notification-color;
+    border: none;
+    border-radius: 50%;
+
+    $properties-for-transition: top, transform, width, height;
+
+    @include transition-settings($properties-for-transition);
+  }
+}
