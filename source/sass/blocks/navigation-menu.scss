@@ -25,17 +25,19 @@
   font-weight: 500;
   line-height: 20px;
   vertical-align: middle;
-  color: $white;
+  color: rgba($white, 0.6);
   text-decoration: none;
 
   border: none;
   border-radius: 4px;
 
-  opacity: 0.6;
-
   $properties-for-transition: width, height, padding, background-color, opacity;
 
   @include transition-settings($properties-for-transition);
+}
+
+.navigation-menu__link-icon {
+  stroke: rgba($white, 0.6);
 }
 
 .navigation-menu__link-text {
@@ -50,8 +52,13 @@
 */
 .navigation-menu__link:hover,
 .navigation-menu__link:focus {
+  color: $white;
   background-color: $dark-theme--hover;
-  opacity: 1;
+}
+
+.navigation-menu__link:hover > .navigation-menu__link-icon,
+.navigation-menu__link:focus > .navigation-menu__link-icon {
+  stroke: $white;
 }
 
 .navigation-menu__link:active {

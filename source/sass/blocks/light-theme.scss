@@ -4,6 +4,12 @@
  */
 
 .light-theme {
+  // --------------===------------- Стили для утилитарных классов -------------===-------------
+  & .sidebar-icon {
+    stroke: $black;
+  }
+
+
   // ---------------===-------------- Общие стили для Сайдбара --------------===---------------
   & .sidebar {
     background-color: $light-theme--background-color;
@@ -18,14 +24,14 @@
     fill: $black;
   }
 
-  & .sidebar-icon {
-    stroke: $black;
-  }
-
 
   // --------------===------------- Стили для Поиска и его эл-тов -------------===-------------
   & .sidebar-search {
     border-color: $search-field-border--light;
+  }
+
+  & .sidebar-search__icon {
+    stroke: rgba(#3f3f46, 0.6);
   }
 
   & .sidebar-search__input {
@@ -44,12 +50,17 @@
 
 
   // ------===------ Стили для Навигационного меню и подобных по виду элементов ------===------
-  & .navigation-menu__link-text {
+  & .navigation-menu__link {
     color: #52525b;
+  }
+
+  & .navigation-menu__link-icon {
+    stroke: rgba(#3f3f46, 0.6);
   }
 
   & .navigation-menu__link:hover,
   & .navigation-menu__link:focus {
+    color: $light-theme--hover-element-content;
     background-color: $light-theme--hover;
   }
 
@@ -58,15 +69,14 @@
     stroke: $light-theme--hover-element-content;
   }
 
-  & .navigation-menu__link:hover > .navigation-menu__link-text,
-  & .navigation-menu__link:focus > .navigation-menu__link-text {
-    color: $light-theme--hover-element-content;
-  }
-
 
   // -------------===------------ Стили для эл-тов секции "Проекты" ------------===------------
   & .projects__open-list-button {
-    color: $black;
+    color: #52525b;
+  }
+
+  & .projects__open-list-button-icon {
+    stroke: rgba(#3f3f46, 0.6);
   }
 
   & .projects__list-link {
@@ -75,17 +85,13 @@
 
   & .projects__open-list-button:hover,
   & .projects__open-list-button:focus {
+    color: $light-theme--hover-element-content;
     background-color: $light-theme--hover;
   }
 
   & .projects__open-list-button:hover > .projects__open-list-button-icon,
   & .projects__open-list-button:focus > .projects__open-list-button-icon {
     stroke: $light-theme--hover-element-content;
-  }
-
-  & .projects__open-list-button:hover > .projects__open-list-button-text,
-  & .projects__open-list-button:focus > .projects__open-list-button-text {
-    color: $light-theme--hover-element-content;
   }
 
   & .projects__list-link:hover,

@@ -29,19 +29,22 @@
   font-weight: 500;
   line-height: 20px;
   text-align: left;
-  color: $white;
+  color: rgba($white, 0.6);
 
   background-color: transparent;
 
   border: none;
   border-radius: 4px;
 
-  opacity: 0.6;
   cursor: pointer;
 
-  $properties-for-transition: width, height, padding, background-color, opacity;
+  $properties-for-transition: width, height, padding, color, background-color, opacity;
 
   @include transition-settings($properties-for-transition);
+}
+
+.projects__open-list-button-icon {
+  stroke: rgba($white, 0.6);
 }
 
 .projects__open-list-button-text {
@@ -191,8 +194,13 @@
 */
 .projects__open-list-button:hover,
 .projects__open-list-button:focus {
+  color: $white;
   background-color: $dark-theme--hover;
-  opacity: 1;
+}
+
+.projects__open-list-button:hover > .projects__open-list-button-icon,
+.projects__open-list-button:focus > .projects__open-list-button-icon{
+  stroke: $white;
 }
 
 .projects__open-list-button:active {
