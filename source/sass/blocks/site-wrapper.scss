@@ -2,4 +2,22 @@
   display: flex;
   background-color: $white;
   box-shadow: 0 0 20px 0 rgba($white, 0.3);
+
+  $properties-for-transition: filter;
+
+  @include transition-settings($properties-for-transition);
+}
+
+
+/*
+==================================
+--------- МЕДИАВЫРАЖЕНИЯ ---------
+==================================
+*/
+
+// *** для ширины вьюпорта "Планшет" ***
+@media (max-width: $width--tablet) {
+  .site-wrapper {
+    filter: blur(7px);
+  }
 }
