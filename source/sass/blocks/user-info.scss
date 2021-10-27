@@ -4,7 +4,6 @@
   align-items: center;
 
   width: 100%;
-  min-width: max-content;
   max-height: 100%;
 
   margin: 0 auto;
@@ -19,11 +18,11 @@
 }
 
 .user-info__basic {
+  display: block;
+
   margin: 0;
   padding: 0;
 
-  font-size: 0;
-  font-weight: 0;
   line-height: 0;
 
   $properties-for-transition: font-size, opacity;
@@ -104,4 +103,27 @@
 .user-info__more-link:hover > .user-info__more-link-icon,
 .user-info__more-link:focus > .user-info__more-link-icon {
   opacity: 1;
+}
+
+
+/*
+==================================
+--------- МЕДИАВЫРАЖЕНИЯ ---------
+==================================
+*/
+
+// *** для ширины вьюпорта "Планшет" ***
+@media (max-width: $width--tablet) {
+  .user-info__name,
+  .user-info__speciality {
+    min-width: min-content;
+  }
+}
+
+
+// *** для ширины вьюпорта, которая уже "Планшетной" ***
+@media (max-width: 650px) {
+  .user-info {
+    display: none;
+  }
 }

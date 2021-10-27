@@ -41,6 +41,16 @@
 }
 
 .navigation-menu__link-text {
+  /*
+   *** Небольшое "костыльное" решение псевдоадаптивности текста ссылок Навигации.
+   *** Будет применяться до тех пор, пока не создастся адаптивный Сайдбар.
+   *** ---
+   *** Сейчас текст ссылок просто обрезается и в конец ему добавляется многоточие,
+   *** создавая визуальную иллюзию незаконченности текста.
+   */
+  text-overflow: ellipsis;
+  overflow: hidden;
+
   $properties-for-transition: color, opacity;
 
   @include transition-settings($properties-for-transition);

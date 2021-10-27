@@ -125,7 +125,7 @@
 
 
   // ----------===----------- Стили для блока Пользовательской инф-ции -----------===----------
-  & .user-info {
+  & .user-info {   
     width: 0;
     height: 0;
 
@@ -136,5 +136,9 @@
   & .user-info__name,
   & .user-info__speciality {
     font-size: 0;
+  }
+
+  & .user-info__more-link {
+    display: none;
   }
 }

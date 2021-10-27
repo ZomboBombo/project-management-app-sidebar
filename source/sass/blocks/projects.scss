@@ -48,6 +48,17 @@
 }
 
 .projects__open-list-button-text {
+  /*
+   *** Небольшое "костыльное" решение псевдоадаптивности текста ссылок Навигации.
+   *** Будет применяться до тех пор, пока не создастся адаптивный Сайдбар.
+   *** ---
+   *** Сейчас текст ссылок просто обрезается и в конец ему добавляется многоточие,
+   *** создавая визуальную иллюзию незаконченности текста.
+   */
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
   $properties-for-transition: color, opacity;
 
   @include transition-settings($properties-for-transition);
@@ -133,13 +144,19 @@
   font-weight: 500;
   line-height: 20px;
   vertical-align: middle;
-  color: $white;
+  color: rgba($white, 0.6);
   text-decoration: none;
+
+  /*
+   *** Небольшое "костыльное" решение псевдоадаптивности текста ссылок Навигации.
+   *** Будет применяться до тех пор, пока не создастся адаптивный Сайдбар.
+   *** ---
+   *** Сейчас текст ссылок просто обрезается.
+   */
+  overflow: hidden;
 
   border: none;
   border-radius: 4px;
-
-  opacity: 0.6;
 
   $properties-for-transition: height, font-size, color, background-color, opacity;
 
@@ -210,8 +227,8 @@
 
 .projects__list-link:hover,
 .projects__list-link:focus {
+  color: $white;
   background-color: $dark-theme--hover;
-  opacity: 1;
 }
 
 .projects__list-link:active {
@@ -226,4 +243,22 @@
 
 .projects__create-project-button:active {
   opacity: 0.7;
+}
+
+
+/*
+==================================
+--------- МЕДИАВЫРАЖЕНИЯ ---------
+==================================
+*/
+
+// *** для ширины вьюпорта "Планшет" ***
+@media (max-width: $width--tablet) {
+  .projects__create-project-button-icon {
+    margin: 0;
+  }
+
+  .projects__create-project-button-text {
+    font-size: 0;
+  }
 }

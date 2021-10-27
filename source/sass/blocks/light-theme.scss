@@ -51,7 +51,7 @@
 
   // ------===------ Стили для Навигационного меню и подобных по виду элементов ------===------
   & .navigation-menu__link {
-    color: #52525b;
+    color: $light-theme--text-color;
   }
 
   & .navigation-menu__link-icon {
@@ -72,7 +72,7 @@
 
   // -------------===------------ Стили для эл-тов секции "Проекты" ------------===------------
   & .projects__open-list-button {
-    color: #52525b;
+    color: $light-theme--text-color;
   }
 
   & .projects__open-list-button-icon {
@@ -80,7 +80,7 @@
   }
 
   & .projects__list-link {
-    color: $black;
+    color: $light-theme--text-color;
   }
 
   & .projects__open-list-button:hover,

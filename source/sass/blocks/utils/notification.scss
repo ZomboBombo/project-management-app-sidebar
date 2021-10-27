@@ -29,3 +29,26 @@
     @include transition-settings($properties-for-transition);
   }
 }
+
+
+/*
+==================================
+--------- МЕДИАВЫРАЖЕНИЯ ---------
+==================================
+*/
+
+// *** для ширины вьюпорта "Планшет" ***
+@media (max-width: $width--tablet) {
+  .notification {
+    &::after {
+      content: "";
+  
+      top: 3px;
+      right: 3px;
+      transform: none;
+
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
