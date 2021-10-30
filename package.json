@@ -2,19 +2,20 @@
   "name": "eugenelepekhinart",
   "version": "1.0.0",
   "description": "Test task for Eugene Lepekhin Art studio",
+  "author": "Sergey Novikov (ZBom)",
+  "license": "ISC",
   "browserify": {
     "transform": [
       "babelify"
     ]
   },
   "scripts": {
-    "eslint": "eslint src/",
-    "test": "npm run eslint",
+    "eslint": "eslint source/js",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "test": "npm run stylelint && npm run eslint",
     "build": "gulp build",
     "start": "gulp start"
   },
-  "author": "Sergey Nivikov (ZBom)",
-  "license": "ISC",
   "typeRoots": [
     "./node_modules/@types",
     "./types"
@@ -29,6 +30,7 @@
     "browserify": "17.0.0",
     "del": "6.0.0",
     "eslint": "8.0.0",
+    "eslint-config-htmlacademy": "^4.1.0",
     "glob": "7.2.0",
     "gulp": "4.0.2",
     "gulp-cheerio": "1.0.0",
@@ -47,6 +49,7 @@
     "readable-stream": "3.6.0",
     "sass": "1.42.1",
     "stylelint": "13.13.1",
+    "stylelint-config-htmlacademy": "^0.1.10",
     "vinyl-source-stream": "2.0.0"
   },
   "dependencies": {
