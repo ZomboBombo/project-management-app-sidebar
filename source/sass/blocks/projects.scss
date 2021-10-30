@@ -91,10 +91,10 @@
 
   $properties-for-transition: height, font-size;
 
-  @include transition-settings($properties-for-transition);  
+  @include transition-settings($properties-for-transition);
 
   &::before {
-    content: '';
+    content: "";
 
     position: absolute;
     top: 50%;
@@ -110,7 +110,7 @@
     border: none;
     border-radius: 2px;
   }
-  
+
   // *** Цветовая схема для элементов списка Проектов ***
 
   /*-- Каждый 4-ый эл-т, начиная с 1-го --*/
@@ -216,7 +216,7 @@
 }
 
 .projects__open-list-button:hover > .projects__open-list-button-icon,
-.projects__open-list-button:focus > .projects__open-list-button-icon{
+.projects__open-list-button:focus > .projects__open-list-button-icon {
   stroke: $white;
 }
 

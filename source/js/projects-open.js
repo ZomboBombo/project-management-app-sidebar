@@ -21,17 +21,17 @@ const projectsLinks = projectsList.querySelectorAll('.projects__list-link');
  *** для включения/отключения "tabindex"
  *** у ссылок списка "Проектов".
  */
- export const ProjectsLinksManipulation = {
+export const ProjectsLinksManipulation = {
   deactivateTabindex: () => {
     Array.from(projectsLinks).forEach((element) => {
       element.setAttribute('tabindex', -1);
-    })
+    });
   },
 
   activateTabindex: () => {
     Array.from(projectsLinks).forEach((element) => {
       element.removeAttribute('tabindex');
-    })
+    });
   },
 };
 

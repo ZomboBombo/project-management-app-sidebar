@@ -38,12 +38,12 @@
     height: 12px;
 
     background-color: #22c55e;
-    border: 2px solid white;
+    border: 2px solid $white;
     border-radius: 50%;
   }
 }
 
-.sidebar-footer__user-avatar { 
+.sidebar-footer__user-avatar {
   display: block;
 
   border: none;

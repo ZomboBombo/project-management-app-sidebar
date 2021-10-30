@@ -43,7 +43,7 @@ const themeSwitcher = themeSwitcherBlock.querySelector('#theme-switcher');
  *** Условие для проверки текущего состояния Темы:
  *** ---
  *** ЕСЛИ запись в localStorage равняется "...ALTERNATIVE",
- *** ТО установить альтернативную ("Светлую") тему на сайте. 
+ *** ТО установить альтернативную ("Светлую") тему на сайте.
  */
 const currentThemeState = localStorage.getItem(LOCAL_STORAGE_THEME_STATE);
 if (currentThemeState === ThemeName.local_storage.ALTERNATIVE) {
