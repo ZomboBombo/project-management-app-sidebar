@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lepekhin Art Studio</title>
+    <link rel="stylesheet" href="css/styles.min.css">
+
+    <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" crossorigin="">
+    <link rel="preload" href="fonts/Inter-Medium.woff2" as="font" crossorigin="">
+    <link rel="preload" href="fonts/Inter-SemiBold.woff2" as="font" crossorigin="">
+  </head>
+  <body>
+    <!--
+      ==================
+      ### SVG-спрайт ###
+      ==================
+    -->
+    <div class="visually-hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="logo" viewBox="0 0 82 31"><path d="M9.333 4.736H1.99c0 17.523-.088 21.398-1.99 22.733v3.1h3.096c.221-4.607.045-9.128 0-23.035h3.14V30.57h3.097V4.736zm6.209 11.539h5.307v-6.89c0-3.745-1.282-5.08-3.715-5.08-2.654 0-4.689 1.593-4.689 5.856v15.801c0 3.703 1.371 5.038 4.07 5.038 2.963 0 4.379-3.1 4.29-7.19l-.132-5.167h-.62l-.132 5.037c-.089 2.756-.664 4.392-1.99 4.392-1.24 0-2.39-.474-2.39-3.574v-8.223zm1.282-9.042c.885 0 1.371.43 1.371 3.574v4.865h-2.653V9.73c0-1.55.22-2.497 1.282-2.497zm16.333-2.497h-9.2v25.833h3.096V7.534h3.008V30.57h3.096V4.736zM40.485 0H36.68v1.98h3.804V0zm1.061 0v1.98h3.804V0h-3.804zm-.62 4.306c-2.653 0-4.688 1.593-4.688 5.855v15.801c0 3.703 1.371 5.038 4.07 5.038 2.963 0 4.379-3.1 4.29-7.19l-.133-5.167h-.619l-.132 5.037c-.089 2.756-.664 4.392-1.99 4.392-1.24 0-2.39-.473-2.39-3.573v-8.224h5.308V9.386c0-3.746-1.282-5.08-3.715-5.08zm-1.592 11.366V9.731c0-1.55.222-2.498 1.283-2.498.885 0 1.371.43 1.371 3.574v4.865h-2.654zm13.886.818l4.157-11.754H53.66l-1.017 9.86h-.486l-1.062-4.564-1.46-5.296h-3.494l4.246 12.314-4.423 13.52h3.715l1.372-11.626h.398l1.061 5.64 1.46 5.985h3.494L53.22 16.49zM68.751 4.736h-3.14l-3.716 20.537h-.62l.62-9.946.31-10.591H59.02v25.833h3.14l3.672-20.538h.663l-.619 9.946-.265 10.592h3.14V4.736zm9.423 0v12.313h-3.23V4.736h-3.096v25.833h3.097V17.911h3.229v12.658h3.096V4.736h-3.096z"></path></symbol><symbol id="icon-activity" viewBox="0 0 20 20"><path d="M18.333 10H15l-2.5 7.5-5-15L5 10H1.667" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></symbol><symbol id="icon-folder" viewBox="0 0 20 20"><path d="M18.333 15.833a1.666 1.666 0 01-1.666 1.667H3.333a1.667 1.667 0 01-1.666-1.667V4.167A1.667 1.667 0 013.333 2.5H7.5L9.167 5h7.5a1.666 1.666 0 011.666 1.667v9.166z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></symbol><symbol id="icon-home" viewBox="0 0 20 20"><path d="M2.5 7.5L10 1.667 17.5 7.5v9.167a1.667 1.667 0 01-1.667 1.666H4.167A1.667 1.667 0 012.5 16.667V7.5z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7.5 18.333V10h5v8.333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></symbol><symbol id="icon-inbox" viewBox="0 0 20 20"><path d="M18.333 10h-5l-1.666 2.5H8.333L6.667 10h-5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4.542 4.258L1.667 10v5a1.667 1.667 0 001.666 1.667h13.334A1.666 1.666 0 0018.333 15v-5l-2.875-5.742a1.667 1.667 0 00-1.491-.925H6.033a1.667 1.667 0 00-1.491.925v0z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></symbol><symbol id="icon-list" viewBox="0 0 20 20"><path d="M6.667 5H17.5M6.667 10H17.5M6.667 15H17.5M2.5 5h.008M2.5 10h.008M2.5 15h.008" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></symbol><symbol id="icon-more--vertical" viewBox="0 0 24 24"><path d="M12 13a1 1 0 100-2 1 1 0 000 2zm0-7a1 1 0 100-2 1 1 0 000 2zm0 14a1 1 0 100-2 1 1 0 000 2z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></symbol><symbol id="icon-plus" viewBox="0 0 17 16"><path d="M8.5 3.333v9.334M3.833 8h9.334" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></symbol><symbol id="icon-search" viewBox="0 0 20 20"><path d="M9.167 15.833a6.667 6.667 0 100-13.333 6.667 6.667 0 000 13.333zM17.5 17.5l-3.625-3.625" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></symbol><symbol id="icon-users" viewBox="0 0 20 20"><path d="M14.167 17.5v-1.667a3.333 3.333 0 00-3.334-3.333H4.167a3.333 3.333 0 00-3.334 3.333V17.5M7.5 9.167a3.333 3.333 0 100-6.667 3.333 3.333 0 000 6.667zM19.167 17.5v-1.667a3.333 3.333 0 00-2.5-3.225m-3.334-10a3.333 3.333 0 010 6.459" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></symbol></svg>
+    </div>
+
+    <div class="container site-wrapper">
+      <aside class="sidebar" id="sidebar">
+        <h1 class="visually-hidden">Приложение для управления проектами</h1>
+
+        <header class="sidebar__header sidebar-header">
+          <button type="button" class="sidebar-header__toggle-button" id="sidebar-toggle-button" title="Открыть/закрыть боковую панель" aria-label="Открыть/закрыть боковую панель">
+            Открыть/закрыть боковую панель
+
+            <svg width="82" height="32" class="sidebar-header__logo">
+              <use xlink:href="#logo"></use>
+            </svg>
+          </button>
+        </header>
+
+        <div class="sidebar__inner-wrapper">
+          <section class="sidebar__navigation">
+            <h2 class="visually-hidden">Навигационное меню</h2>
+
+            <div class="sidebar__navigation-search sidebar-search">
+              <svg width="20" height="20" class="sidebar-icon sidebar-search__icon">
+                <use xlink:href="#icon-search"></use>
+              </svg>
+
+              <input type="search" class="sidebar-search__input" id="search-input" placeholder="Search" title="Введите данные для поиска интересующей Вас информации" aria-label="Введите данные для поиска интересующей Вас информации">
+
+              <button type="submit" class="sidebar-search__submit-button" aria-label="Найти интересующую информацию">Найти</button>
+            </div>
+
+            <nav class="navigation-menu">
+              <ul class="navigation-menu__list">
+                <li class="navigation-menu__list-item">
+                  <a href="#" class="navigation-menu__link" title="Отобразить Главную страницу приложения" aria-label="Отобразить Главную страницу приложения">
+                    <svg width="20" height="20" class="sidebar-icon navigation-menu__link-icon">
+                      <use xlink:href="#icon-home"></use>
+                    </svg>
+
+                    <span class="navigation-menu__link-text">Главная</span>
+                  </a>
+                </li>
+                <li class="navigation-menu__list-item">
+                  <a href="#" class="navigation-menu__link notification" data-notification-count="12" title="Показать входящие сообщения" aria-label="Показать входящие сообщения">
+                    <svg width="20" height="20" class="sidebar-icon navigation-menu__link-icon">
+                      <use xlink:href="#icon-inbox"></use>
+                    </svg>
+
+                    <span class="navigation-menu__link-text">Входящие</span>
+                  </a>
+                </li>
+                <li class="navigation-menu__list-item">
+                  <a href="#" class="navigation-menu__link" title="Отобразить список текущих задач" aria-label="Отобразить список текущих задач">
+                    <svg width="20" height="20" class="sidebar-icon navigation-menu__link-icon">
+                      <use xlink:href="#icon-list"></use>
+                    </svg>
+
+                    <span class="navigation-menu__link-text">Задачи</span>
+                  </a>
+                </li>
+                <li class="navigation-menu__list-item">
+                  <a href="#" class="navigation-menu__link" title="Показать суточную активность" aria-label="Показать суточную активность">
+                    <svg width="20" height="20" class="sidebar-icon navigation-menu__link-icon">
+                      <use xlink:href="#icon-activity"></use>
+                    </svg>
+
+                    <span class="navigation-menu__link-text">Активность</span>
+                  </a>
+                </li>
+                <li class="navigation-menu__list-item">
+                  <a href="#" class="navigation-menu__link" title="Отобразить список членов Вашей команды" aria-label="Отобразить список членов Вашей команды">
+                    <svg width="20" height="20" class="sidebar-icon navigation-menu__link-icon">
+                      <use xlink:href="#icon-users"></use>
+                    </svg>
+
+                    <span class="navigation-menu__link-text">Команда</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </section>
+
+          <section class="sidebar__projects projects" id="projects-section">
+            <h2 class="visually-hidden">Проекты компании</h2>
+
+            <div class="projects__wrapper">
+              <button type="button" class="projects__open-list-button" id="projects-open-button" title="Список проектов компании" aria-label="Список проектов компании">
+                <svg width="20" height="20" class="sidebar-icon projects__open-list-button-icon">
+                  <use xlink:href="#icon-folder"></use>
+                </svg>
+
+                <span class="projects__open-list-button-text">Проекты</span>
+              </button>
+
+              <ul class="projects__list" id="projects-list">
+                <li class="projects__list-item">
+                  <a href="#" class="projects__list-link" title="Показать список дизайн-проектов" aria-label="Показать список дизайн-проектов">Дизайн</a>
+                </li>
+                <li class="projects__list-item">
+                  <a href="#" class="projects__list-link" title="Показать список веб-проектов" aria-label="Показать список веб-проектов">Веб</a>
+                </li>
+                <li class="projects__list-item">
+                  <a href="#" class="projects__list-link" title="Показать список проектов, находящихся в редактуре" aria-label="Показать список проектов, находящихся в редактуре">Редактура</a>
+                </li>
+              </ul>
+            </div>
+
+            <button type="button" class="projects__create-project-button" title="Создать новый проект" aria-label="Создать новый проект">
+              <svg width="16" height="16" class="projects__create-project-button-icon">
+                <use xlink:href="#icon-plus"></use>
+              </svg>
+
+              <span class="projects__create-project-button-text">Создать проект</span>
+            </button>
+          </section>
+        </div>
+
+        <footer class="sidebar__footer sidebar-footer">
+          <div class="sidebar-footer__user-avatar-box">
+            <picture>
+              <source srcset="img/avatar.webp, img/avatar@2x.webp 2x" type="image/webp">
+
+              <!--
+                *** 1x: w-40px, h-40px
+                *** 2x: w-80px, h-80px
+              -->
+              <img src="img/avatar.jpg" srcset="img/avatar@2x.jpg 2x" width="40" height="40" class="sidebar-footer__user-avatar" alt="Аватар пользователя">
+            </picture>
+          </div>
+
+          <div class="sidebar-footer__user-info user-info">
+            <p class="user-info__basic">
+              <b class="user-info__name">Сергей Новиков</b>
+              <span class="user-info__speciality">Фронтенд-разработчик</span>
+            </p>
+
+            <a href="#" class="user-info__more-link" title="Показать подробную информацию о пользователе" aria-label="Показать подробную информацию о пользователе">
+              Больше информации...
+
+              <svg width="24" height="24" class="user-info__more-link-icon">
+                <use xlink:href="#icon-more--vertical"></use>
+              </svg>
+            </a>
+          </div>
+        </footer>
+      </aside>
+
+      <div class="site-content">
+        <header class="site-content__section site-header">
+          <h2 class="section-title site-header__title">Шапка</h2>
+
+          <div class="site-header__theme-switcher theme-switcher" id="theme-switcher-block">
+            <p class="theme-switcher__description">Включить «<span class="theme-switcher__theme-name" id="theme-name">Светлую</span>» тему</p>
+
+            <div class="theme-switcher__box">
+              <button type="button" class="theme-switcher__button" id="theme-switcher" title="Изменить цветовую схему на сайте" aria-label="Изменить цветовую схему на сайте"> "Светлая" тема</button>
+            </div>
+          </div>
+        </header>
+        <main class="site-content__section site-main-content">
+          <h2 class="section-title">Студия Евгения Лепёхина</h2>
+        </main>
+        <footer class="site-content__section site-footer">
+          <h2 class="section-title">Подвал</h2>
+        </footer>
+      </div>
+    </div>
+
+    <div class="modal">     
+      <section class="modal__window">
+        <h2 class="visually-hidden">Уведомление о неработоспособности</h2>
+
+        <p class="modal__description">
+          <span class="modal__description-sentence">К сожалению, в данный момент доступна только версия приложения для Десктопа.</span>
+          <span class="modal__description-sentence">Разработчик приносит извинения за предоставленные неудобства...</span>
+        </p>
+      </section>
+    </div>
+
+    
+    <!--
+      ### Скрипты ###
+    -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
